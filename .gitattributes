@@ -1,0 +1,10 @@
+# Default: normalize all text files to LF in the repo
+* text=auto eol=lf
+
+# Windows shell scripts keep CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Unix shell scripts keep LF
+*.sh text eol=lf
+mvnw text eol=lf
