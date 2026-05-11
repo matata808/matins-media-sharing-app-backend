@@ -82,4 +82,11 @@ public class MediaItemService {
         item.setUploadedBy(dto.getUploadedBy());
         return item;
     }
+
+    public void deleteMedia(UUID id){
+        if(!mediaItemRepository.existsById(id)){
+            throw new RuntimeException("Media not found");
+        }
+        mediaItemRepository.deleteById(id);
+    }
 }
